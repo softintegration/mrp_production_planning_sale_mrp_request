@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+        <!-- Manufacturing Planning line tree view inherited-->
+
+        <record id="mrp_production_planning_line_tree_view_inherited" model="ir.ui.view">
+            <field name="name">mrp.production.planning.line.tree.view.inherited</field>
+            <field name="model">mrp.production.planning.line</field>
+            <field name="inherit_id" ref="mrp_production_planning.mrp_production_planning_line_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_request']" position="after">
+                    <field name="client_order_ref"/>
+                    <field name="partner_id"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
